@@ -18,10 +18,7 @@ const searcher = new MultiLeven(['John', 'Mary', 'Foo', 'Bar', 'Baz'], {
 
 // - Invoke `init` only *once*, ideally on system startup.
 searcher.init()
-  .then(() => {
-    // distance tolerance is hardcoded to `3` for now.
-    return searcher.runSearch({ name: 'Jonn' })
-  })
+  .then(() => searcher.runSearch({ name: 'Jonn' }))
   .then(results => {
     console.log(results) // logs `['John']`
   })
