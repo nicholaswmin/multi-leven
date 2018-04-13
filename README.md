@@ -31,7 +31,7 @@ searcher.init()
 
 ## How it works
 
-The passed input array is split in parts equal to the numbers of requested
+The passed input array is split in chunks, equal to the numbers of requested
 workers. Each chunk is loaded in it's own worker.
 
 When you `.runSearch(arg)`, it simply fires *simultaneous* requests to search
