@@ -59,23 +59,24 @@ These are some preliminary performance results. More workers predict
 better performance.
 
 ```
-Creating 4000000 items, equalling 198 MB's of test data
+Creating 4000000 input items,
+equalling 198 MB's of test data.
 
 
   Process on (1) worker
     #init
-      ✓ initializes (4302ms)
+      ✓ initializes (4488ms)
     #runSearch
-      ✓ finds a result (14375ms)
+      ✓ finds a result (14411ms)
 
   Process on (4) workers
     #init
-      ✓ initializes (3332ms)
+      ✓ initializes (3938ms)
     #runSearch
-      ✓ finds a result (3949ms)
+      ✓ finds a result (3940ms)
 
 
-  4 passing (26s)
+  4 passing (27s)
 ```
 
 
