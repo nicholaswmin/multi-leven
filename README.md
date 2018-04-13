@@ -19,10 +19,10 @@ const searcher = new MultiLeven(['John', 'Mary', 'Foo', 'Bar', 'Baz'], {
 searcher.init()
   .then(() => {
     // distance tolerance is hardcode to `3` for now.
-    return searcher.runSearch({ name: 'Jonn '})
+    return searcher.runSearch({ name: 'Jonn' })
   })
   .then(result => {
-    console.log(results)
+    console.log(results) // logs `['John']`
   })
   .catch(err => {
     throw err
