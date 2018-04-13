@@ -73,7 +73,7 @@ class MultiLeven {
         counter1 += 1
       }
 
-      for (var i = 0; i < array.length; i++) {
+      for (let i = 0; i < array.length; i++) {
         newArray[counter2++].push(array[i])
 
         if (counter2 > parts - 1) {
