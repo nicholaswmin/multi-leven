@@ -34,7 +34,7 @@ Ideally, you will invoke `init()` only *once*, on startup. From then on you
 can call `runSearch(arg)` as many times as you want.
 
 You should use this tactic because initialisation of very large input arrays
-is slow due to IPC serialisation overhead.
+is slow due to [IPC serialisation overhead][ipc-data-sharing-so].
 
 ## How it works
 
@@ -88,3 +88,4 @@ Creating 4000000 items, equalling 198 MB's of test data
 MIT
 
 [nicholaswmin]: https://github.com/nicholaswmin
+[ipc-data-sharing-so]: https://stackoverflow.com/a/27327402/1814486
