@@ -10,8 +10,10 @@ TBD
 ```javascript
 const MultiLeven = require('multi-leven')
 
+// Ideally, `workersNum` reflects the number of physical cores on your
+// system.
 const searcher = new MultiLeven(['John', 'Mary', 'Foo', 'Bar', 'Baz'], {
-  workersNum: 1
+  workersNum: 4
 })
 
 searcher.init()
