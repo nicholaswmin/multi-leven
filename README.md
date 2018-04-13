@@ -46,6 +46,32 @@ with their own chunk of the input array waiting for the next search.
 $ npm test
 ```
 
+## Performance testing
+
+These are some preliminary performance results. More workers predict
+better performance.
+
+```
+Creating 4000000 items, equalling 198 MB's of test data
+
+
+  Process on (1) worker
+    #init
+      ✓ initializes (4302ms)
+    #runSearch
+      ✓ finds a result (14375ms)
+
+  Process on (4) workers
+    #init
+      ✓ initializes (3332ms)
+    #runSearch
+      ✓ finds a result (3949ms)
+
+
+  4 passing (26s)
+```
+
+
 ## Authors
 
 - Nicholas Kyriakides, [@nicholaswmin][nicholaswmin]
