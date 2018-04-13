@@ -21,7 +21,7 @@ searcher.init()
     // distance tolerance is hardcode to `3` for now.
     return searcher.runSearch({ name: 'Jonn' })
   })
-  .then(result => {
+  .then(results => {
     console.log(results) // logs `['John']`
   })
   .catch(err => {
