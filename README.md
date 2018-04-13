@@ -7,7 +7,25 @@ TBD
 
 ## Usage
 
-TBD
+```javascript
+const MultiLeven = require('multi-leven')
+
+const searcher = new MultiLeven(['John', 'Mary', 'Foo', 'Bar', 'Baz'], {
+  workersNum: 1
+})
+
+searcher.init()
+  .then(() => {
+    // distance tolerance is hardcode to `3` for now.
+    return searcher.runSearch({ name: 'Jonn '})
+  })
+  .then(result => {
+    console.log(results)
+  })
+  .catch(err => {
+    throw err
+  })
+```
 
 ## Tests
 
