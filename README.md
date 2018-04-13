@@ -16,6 +16,7 @@ const searcher = new MultiLeven(['John', 'Mary', 'Foo', 'Bar', 'Baz'], {
   workersNum: 4
 })
 
+// - Invoke `init` only *once*, ideally on system startup.
 searcher.init()
   .then(() => {
     // distance tolerance is hardcode to `3` for now.
@@ -28,6 +29,12 @@ searcher.init()
     throw err
   })
 ```
+
+Ideally, you will invoke `init()` only *once*, on startup. From then on you
+can call `runSearch(arg)` as many times as you want.
+
+You should use this tactic because initialisation of very large input arrays
+is slow due to IPC serialisation overhead.
 
 ## How it works
 
