@@ -5,9 +5,7 @@ const Worker = require('tiny-worker')
 class MultiLeven {
   constructor (entries, { workersNum }) {
     this._splitEntries = this._chunk(entries, workersNum)
-    this._workers = this._splitEntries.map(() => {
-      return new Worker('worker.js')
-    })
+    this._workers = this._splitEntries.map(() => new Worker('worker.js'))
   }
 
   init () {
@@ -19,6 +17,17 @@ class MultiLeven {
       this._splitEntries = []
 
       return true
+    })
+  }
+
+  runSearch ({ name }) {
+    const jobs = this._workers.map((worker, i) => {
+      return this._runSearchInWorker(worker, { name })
+    })
+
+    return Promise.all(jobs).then(result => {
+      return result.filter(result => result)
+        .reduce((arr, result ) => arr.concat(result), [])
     })
   }
 
@@ -54,35 +63,28 @@ class MultiLeven {
 
   _chunk (array, parts = 1) {
     if (parts < array.length && array.length > 1 && array != null) {
-        var newArray = []
-        var counter1 = 0
-        var counter2 = 0
+      const newArray = []
 
-        while (counter1 < parts) {
-            newArray.push([])
-            counter1 += 1
+      let counter1 = 0
+      let counter2 = 0
+
+      while (counter1 < parts) {
+        newArray.push([])
+        counter1 += 1
+      }
+
+      for (var i = 0; i < array.length; i++) {
+        newArray[counter2++].push(array[i])
+
+        if (counter2 > parts - 1) {
+          counter2 = 0
         }
+      }
 
-        for (var i = 0; i < array.length; i++) {
-            newArray[counter2++].push(array[i])
-            if (counter2 > parts - 1)
-                counter2 = 0
-        }
-
-        return newArray
-    } else
-        return array
-  }
-
-  runSearch ({ name }) {
-    const jobs = this._workers.map((worker, i) => {
-      return this._runSearchInWorker(worker, { name })
-    })
-
-    return Promise.all(jobs).then(result => {
-      return result.filter(result => result)
-        .reduce((arr, result ) => arr.concat(result), [])
-    })
+      return newArray
+    } else {
+      return array
+    }
   }
 }
 
