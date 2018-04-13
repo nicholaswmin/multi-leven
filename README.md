@@ -79,6 +79,7 @@ equalling 198 MB's of test data.
   4 passing (27s)
 ```
 
+Tests were run on an iMac 2013, 3.2GHz i5, 8GB RAM running MacOS 10.12.6
 
 ## Authors
 
