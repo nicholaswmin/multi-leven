@@ -16,9 +16,8 @@ const searcher = new MultiLeven(['John', 'Mary', 'Foo', 'Bar', 'Baz'], {
   workersNum: 4
 })
 
-// - Invoke `init` only *once*, ideally on system startup.
 searcher.init()
-  .then(() => searcher.runSearch({ name: 'Jonn' }))
+  .then(() => searcher.search('Jonn'))
   .then(results => {
     console.log(results) // logs `['John']`
   })
@@ -27,8 +26,8 @@ searcher.init()
   })
 ```
 
-Ideally, you will invoke `init()` only *once*, on startup. From then on you
-can call `runSearch(arg)` as many times as you want.
+**Note:** Ideally, you will invoke `init()` only *once*, on startup. From then
+on you can call `.search(arg)` as many times as you want.
 
 You should use this tactic because initialisation of very large input arrays
 is slow due to [IPC serialisation overhead][ipc-data-sharing-so].
@@ -38,7 +37,7 @@ is slow due to [IPC serialisation overhead][ipc-data-sharing-so].
 The passed input array is split in chunks, equal to the numbers of requested
 workers. Each chunk is loaded in it's own worker.
 
-When you `.runSearch(arg)`, it simply fires *simultaneous* requests to search
+When you `.search(arg)`, it simply fires *simultaneous* requests to search
 for the passed name in each worker.
 
 The workers are not terminated when the search completes. They stay up
@@ -63,13 +62,13 @@ equalling 198 MB's of test data.
   Process on (1) worker
     #init
       ✓ initializes (4488ms)
-    #runSearch
+    #search
       ✓ finds a result (14411ms)
 
   Process on (4) workers
     #init
       ✓ initializes (3938ms)
-    #runSearch
+    #search
       ✓ finds a result (3940ms)
 
 

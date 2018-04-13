@@ -20,9 +20,9 @@ class MultiLeven {
     })
   }
 
-  runSearch ({ name }) {
+  search (name) {
     const jobs = this._workers.map((worker, i) => {
-      return this._runSearchInWorker(worker, { name })
+      return this._runSearchInWorker(worker, name)
     })
 
     return Promise.all(jobs).then(result => {
@@ -46,7 +46,7 @@ class MultiLeven {
     })
   }
 
-  _runSearchInWorker (worker, { name }) {
+  _runSearchInWorker (worker, name) {
     return new Promise(resolve => {
       worker.onmessage = e => {
         if (e.data.type === 'search-completed') {
@@ -61,7 +61,7 @@ class MultiLeven {
     })
   }
 
-  _chunk (array, parts = 1) {
+  _chunk (array, parts) {
     if (parts < array.length && array.length > 1 && array != null) {
       const newArray = []
 

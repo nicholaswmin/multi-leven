@@ -4,7 +4,7 @@
   "description": "Levenshtein-distance on multiple processes",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test --exit --timeout=20000"
+    "test": "mocha test --exit --timeout=25000"
   },
   "repository": {
     "type": "git",

@@ -19,9 +19,9 @@ describe('Process on (1) worker', () => {
     })
   })
 
-  describe('#runSearch', () => {
+  describe('#search', () => {
     it('finds a result', () => {
-      return searcher.runSearch({ name: 'Nikolas Ioannis Kyriakides' })
+      return searcher.search('Nikolas Ioannis Kyriakides')
         .then(results => {
           results.should.have.length(2)
           results[0].should.equal('Nicholas Ioannis Kyriakides')
@@ -40,9 +40,9 @@ describe('Process on (4) workers', () => {
     })
   })
 
-  describe('#runSearch', () => {
+  describe('#search', () => {
     it('finds a result', () => {
-      return searcher.runSearch({ name: 'Nikolas Ioannis Kyriakides' })
+      return searcher.search('Nikolas Ioannis Kyriakides')
         .then(results => {
           results.should.have.length(2)
           results[0].should.equal('Nicholas Ioannis Kyriakides')
