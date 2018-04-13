@@ -29,6 +29,17 @@ searcher.init()
   })
 ```
 
+## How it works
+
+The passed input array is split in parts equal to the numbers of requested
+workers. Each chunk is loaded in it's own worker.
+
+When you `.runSearch(arg)`, it simply fires *simultaneous* requests to search
+for the passed name in each workers.
+
+The workers are not terminated when the search completes. They stay up
+with their own chunk of the input array waiting for the next search.
+
 ## Tests
 
 ```bash
