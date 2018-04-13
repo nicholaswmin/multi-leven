@@ -21,9 +21,6 @@ searcher.init()
   .then(results => {
     console.log(results) // logs `['John']`
   })
-  .catch(err => {
-    throw err
-  })
 ```
 
 **Note:** Ideally, you will invoke `init()` only *once*, on startup. From then
