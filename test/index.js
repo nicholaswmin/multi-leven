@@ -7,7 +7,8 @@ const MultiLeven = require('../index.js')
 chai.should()
 
 const entries = testData({
-  howMany: 4000000, needle: 'Nicholas Ioannis Kyriakides'
+  howMany: 4000000,
+  needle: 'Nicholas Ioannis Kyriakides'
 })
 
 describe('Process on (1) worker', () => {
