@@ -1,5 +1,5 @@
 # multi-leven
-Levenshtein-distance on multiple processes [WIP]
+[Levenshtein-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on multiple processes [WIP]
 
 ## Installation
 
