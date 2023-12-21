@@ -3,6 +3,9 @@
 
 > In information theory, linguistics, and computer science, the Levenshtein distance is a string metric for measuring the difference between two sequences. Informally, the Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.
 
+This is a working example of a special case of [parallelization](https://en.wikipedia.org/wiki/Parallel_computing), called [*Data Parallelism*](https://en.wikipedia.org/wiki/Data_parallelism). In single-threaded runtimes (such as NodeJS), short of messing with native C++ NodeJS modules, it is in effect the *only viable* way to perform parallelization of typical fuzzy search algorithms.
+
+
 ## Installation
 
 TBD
@@ -35,6 +38,9 @@ is slow due to [IPC serialisation overhead][ipc-data-sharing-so].
 
 The passed input array is split in chunks, equal to the numbers of requested
 workers. Each chunk is loaded in it's own worker.
+
+![image](https://live.staticflickr.com/65535/53412264841_bb421d95b7_o.png)
+
 
 When you `.search(arg)`, it simply fires *simultaneous* requests to search
 for the passed name in each worker.
