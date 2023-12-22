@@ -3,8 +3,9 @@
 
 > In information theory, linguistics, and computer science, the Levenshtein distance is a string metric for measuring the difference between two sequences. Informally, the Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.
 
-This is a working example of a special case of [parallelization](https://en.wikipedia.org/wiki/Parallel_computing), called [*Data Parallelism*](https://en.wikipedia.org/wiki/Data_parallelism). In single-threaded runtimes (such as NodeJS), short of messing with native C++ NodeJS modules, it is in effect the *only viable* way to perform parallelization of typical fuzzy search algorithms.
+This is a working example of a special case of [parallelization](https://en.wikipedia.org/wiki/Parallel_computing), called [Data Parallelism](https://en.wikipedia.org/wiki/Data_parallelism). In single-threaded runtimes (such as NodeJS), short of messing with native C++ NodeJS modules, it is in effect the *only viable* way to perform parallelization of typical fuzzy search algorithms.
 
+This experiment was created to speed up the search process of [Matchmaker](https://github.com/Euthor), a proprietary [Anti-Money Laundering System](https://www.imf.org/en/Topics/Financial-Integrity/amlcft#:~:text=Videos%20and%20Events-,Overview,system%20and%20member%20countries'%20economies.) that fuzzily links customers of financial organisations to entries in [FATF's PEP (Politically-Exposed Persons) and Sanctioned/Blacklisted Persons & Entities](https://www.fatf-gafi.org/en/countries/black-and-grey-lists.html).
 
 ## Installation
 
@@ -85,6 +86,11 @@ Tests were run on an iMac 2013, 3.2GHz i5, 8GB RAM running MacOS 10.12.6
 ## Authors
 
 - Nicholas Kyriakides, [@nicholaswmin][nicholaswmin]
+
+## Todos
+
+- [ ] Add `teardown` methods
+- [ ] Include difference in each returned match (or pass difference tolerance to filter out irrelevant matches)
 
 ## License
 
