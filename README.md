@@ -5,7 +5,8 @@
 
 This is a working example of a special case of [parallelization](https://en.wikipedia.org/wiki/Parallel_computing), called [Data Parallelism](https://en.wikipedia.org/wiki/Data_parallelism). In single-threaded runtimes (such as NodeJS), short of messing with native C++ NodeJS modules, it is in effect the *only viable* way to perform parallelization of typical fuzzy search algorithms.
 
-This experiment was created to speed up the search process of [Matchmaker](https://github.com/Euthor), a proprietary [Anti-Money Laundering System](https://www.imf.org/en/Topics/Financial-Integrity/amlcft#:~:text=Videos%20and%20Events-,Overview,system%20and%20member%20countries'%20economies.) that fuzzily links customers of financial organisations to entries in [FATF's PEP (Politically-Exposed Persons) and Sanctioned/Blacklisted Persons & Entities](https://www.fatf-gafi.org/en/countries/black-and-grey-lists.html).
+This experiment was created to speed up the search process of a proprietary [AML (Anti-Money Laundering)](https://www.imf.org/en/Topics/Financial-Integrity/amlcft#:~:text=Videos%20and%20Events-,Overview,system%20and%20member%20countries'%20economies.) system that fuzzily links customers of financial organisations to entries in [OFAC's Politically-Exposed Persons, Specially Designated Nationals And Blocked Persons/Entities][ofac-lists].
+
 
 ## Installation
 
@@ -107,3 +108,4 @@ Tests were run on an iMac 2013, 3.2GHz i5, 8GB RAM running MacOS 10.12.6
 
 [nicholaswmin]: https://github.com/nicholaswmin
 [ipc-data-sharing-so]: https://stackoverflow.com/a/27327402/1814486
+[ofac-lists]: https://ofac.treasury.gov/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists
