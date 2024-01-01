@@ -1,11 +1,15 @@
 # multi-leven
-[Levenshtein-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on multiple processes [WIP]
+[Levenshtein-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on multiple processes [WIP].
+
+A parallelisation of [leven](https://github.com/sindresorhus/leven).
 
 > In information theory, linguistics, and computer science, the Levenshtein distance is a string metric for measuring the difference between two sequences. Informally, the Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.
 
 This is a working example of a special case of [parallelization](https://en.wikipedia.org/wiki/Parallel_computing), called [Data Parallelism](https://en.wikipedia.org/wiki/Data_parallelism). In single-threaded runtimes (such as NodeJS), short of messing with native C++ NodeJS modules, it is in effect the *only viable* way to perform parallelization of typical fuzzy search algorithms.
 
 This experiment was created to speed up the search process of a proprietary [AML (Anti-Money Laundering)](https://www.imf.org/en/Topics/Financial-Integrity/amlcft#:~:text=Videos%20and%20Events-,Overview,system%20and%20member%20countries'%20economies.) system that fuzzily links customers of financial organisations to entries in [OFAC's Politically-Exposed Persons, Specially Designated Nationals And Blocked Persons/Entities][ofac-lists].
+
+**Warning:** If you're a designer/architect/engineer of an AML/KYC system, please ensure you read the [Warning](##warning) section below.
 
 
 ## Installation
@@ -98,13 +102,15 @@ Tests were run on an iMac 2013, 3.2GHz i5, 8GB RAM running MacOS 10.12.6
 >
 > The Levenshtein-distance, in particular, is very widely used in AML systems.
 
-This code, as-is, is **NOT** appropriate for use of fuzzy-matching in such systems. First and foremost, it's method of operation is publicly available. Secondly, it's an experiment and not designed to adhere to formal matching performance requirements.
+This code, as-is, is **NOT** appropriate for use of fuzzy-matching in such systems. First and foremost, it's method of operation is publicly available. Secondly, it's an experiment, it is not designed to adhere to formal matching performance requirements nor does it have a complete and automated test suite to validate its results.
 
 Because of the very sensitive nature of the goals of such systems, you should use a multi-attribute matching mechanism, including the use of extra approximate-string matching algorithms ([Soundex](https://en.wikipedia.org/wiki/Soundex), [Jaro–Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance), etc).
 
-There are multiple known instances of bad actors tricking the system simply by knowing how the screening/matching mechanism of a financial organisational works, in some cases even [the financial organisations themselves trick their own system intentionally](https://www.investopedia.com/stock-analysis/2013/investing-news-for-jan-29-hsbcs-money-laundering-scandal-hbc-scbff-ing-cs-rbs0129.aspx) to allow blacklisted persons and entities; access to the financial system without legal repercussions.
+There are multiple known instances of bad actors tricking such systems simply by knowing how the screening/matching mechanism of a financial organisational works, in some cases even [the financial organisations themselves trick their own system intentionally](https://www.investopedia.com/stock-analysis/2013/investing-news-for-jan-29-hsbcs-money-laundering-scandal-hbc-scbff-ing-cs-rbs0129.aspx) to allow blacklisted persons and entities; access to the financial system without legal repercussions.
 
-The matching mechanism of AML systems should also be kept confidential.
+The internal workings of matching mechanisms of AML/KYC systems should be kept confidential. 
+
+For more information on this topic, the [FATF](https://www.fatf-gafi.org/en/the-fatf.html) has published a paper that lists and describes various methods of designing robust AML/KYC systems. You can find the paper here: [Opportunities and Challenges of New Technologies FOR AML/CFT](https://www.fatf-gafi.org/content/dam/fatf-gafi/guidance/Opportunities-Challenges-of-New-Technologies-for-AML-CFT.pdf.coredownload.pdf)
 
 ## License
 
