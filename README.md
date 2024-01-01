@@ -93,6 +93,19 @@ Tests were run on an iMac 2013, 3.2GHz i5, 8GB RAM running MacOS 10.12.6
 - [ ] Add `teardown` methods
 - [ ] Include difference in each returned match (or pass difference tolerance to filter out irrelevant matches)
 
+## Warning
+> The following warning pertains only for designers/architects/engineers of AML (Anti-Money Laundering) and KYC (Know Your Customer) systems.
+>
+> The Levenshtein-distance, in particular, is very widely used in AML systems.
+
+This code, as-is, is **NOT** appropriate for use of fuzzy-matching in such systems. First and foremost, it's method of operation is publicly available. Secondly, it's an experiment and not designed to adhere to formal matching performance requirements.
+
+Because of the very sensitive nature of the goals of such systems, you should use a multi-attribute matching mechanism, including the use of extra approximate-string matching algorithms ([Soundex](https://en.wikipedia.org/wiki/Soundex), [Jaro–Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance), etc).
+
+There are multiple known instances of bad actors tricking the system simply by knowing how the screening/matching mechanism of a financial organisational works, in some cases even [the financial organisations themselves trick their own system intentionally](https://www.investopedia.com/stock-analysis/2013/investing-news-for-jan-29-hsbcs-money-laundering-scandal-hbc-scbff-ing-cs-rbs0129.aspx) to allow blacklisted persons and entities; access to the financial system without legal repercussions.
+
+The matching mechanism of AML systems should also be kept confidential.
+
 ## License
 
 > ### MIT License
