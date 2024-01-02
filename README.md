@@ -106,7 +106,7 @@ This code, as-is, is **NOT** appropriate for use of fuzzy-matching in such syste
 
 Because of the very sensitive nature of the goals of such systems, you should use a multi-attribute matching mechanism, including the use of extra approximate-string matching algorithms ([Soundex](https://en.wikipedia.org/wiki/Soundex), [Jaro–Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance), etc).
 
-There are multiple known instances of bad actors tricking such systems simply by knowing how the screening/matching mechanism of a financial organisational works, in some cases even [the financial organisations themselves trick their own system intentionally](https://www.investopedia.com/stock-analysis/2013/investing-news-for-jan-29-hsbcs-money-laundering-scandal-hbc-scbff-ing-cs-rbs0129.aspx) to allow blacklisted persons and entities; access to the financial system without legal repercussions.
+There are multiple known instances of bad actors tricking such systems simply by knowing how the screening/matching mechanism of a financial organisation works, in some cases even [the financial organisations themselves trick their own system intentionally](https://www.investopedia.com/stock-analysis/2013/investing-news-for-jan-29-hsbcs-money-laundering-scandal-hbc-scbff-ing-cs-rbs0129.aspx) to allow blacklisted persons and entities; access to the financial system without legal repercussions.
 
 The internal workings of matching mechanisms of AML/KYC systems should be kept confidential. 
 
