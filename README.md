@@ -114,7 +114,7 @@ Because of the very sensitive nature of the goals of such systems, you should us
 
 There are multiple known instances of bad actors tricking such systems simply by knowing how the screening/matching mechanism of a financial organisation works, in some cases even [the financial organisations themselves trick their own system intentionally](https://www.investopedia.com/stock-analysis/2013/investing-news-for-jan-29-hsbcs-money-laundering-scandal-hbc-scbff-ing-cs-rbs0129.aspx) to allow blacklisted persons and entities; access to the financial system without legal repercussions.
 
-The internal workings of matching mechanisms of AML/KYC systems should be kept confidential. 
+The internal workings of matching mechanisms of AML/KYC systems should be kept confidential and on a [need-to-know](https://en.wikipedia.org/wiki/Need_to_know) basis.
 
 For more information on this topic, the [FATF](https://www.fatf-gafi.org/en/the-fatf.html) has published a paper that lists and describes various methods of designing robust AML/KYC systems. You can find the paper here: [Opportunities and Challenges of New Technologies for AML/CFT](https://www.fatf-gafi.org/content/dam/fatf-gafi/guidance/Opportunities-Challenges-of-New-Technologies-for-AML-CFT.pdf.coredownload.pdf)
 
