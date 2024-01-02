@@ -15,7 +15,7 @@ This is a working example of a special case of [parallelization](https://en.wiki
 
 This experiment was created to speed up the search process of a proprietary [AML (Anti-Money Laundering)](https://www.imf.org/en/Topics/Financial-Integrity/amlcft#:~:text=Videos%20and%20Events-,Overview,system%20and%20member%20countries'%20economies.) system that fuzzily links customers of financial organisations to entries in [OFAC's Politically-Exposed Persons, Specially Designated Nationals And Blocked Persons/Entities][ofac-lists].
 
-**Warning:** If you're a designer/architect/engineer of an AML/KYC system, please ensure you read the [Warning](#warning-for-use-aml-systems) section below.
+**Warning:** If you're a designer/architect/engineer of an AML/KYC system, please ensure you read the [Warning](#warning-for-use-in-aml-systems) section below.
 
 
 ## Installation
