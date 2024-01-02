@@ -1,5 +1,10 @@
+<sub>[Nicholas Kyriakides (@nicholaswmin)](https://github.com/nicholaswmin) for [Euthor LTD](https://www.euthor.com/), Nicosia, Cyprus. 2019.</sub>
+
+---
+
 # multi-leven
-[Levenshtein-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on multiple processes [WIP].
+
+The [Levenshtein-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on multiple processes, in [NodeJS](https://nodejs.org/en/about) [WIP]
 
 A parallelisation of [leven](https://github.com/sindresorhus/leven).
 
