@@ -1,10 +1,11 @@
-<sub>[Nicholas Kyriakides (@nicholaswmin)](https://github.com/nicholaswmin) for [Euthor LTD](https://www.euthor.com/), Nicosia, Cyprus. 2019.</sub>
-
----
+<sub>[Nicholas Kyriakides (@nicholaswmin)](https://github.com/nicholaswmin)  
+[Euthor LTD](https://www.euthor.com/)  
+Nicosia, Cyprus  
+2019.</sub>  
 
 # multi-leven
 
-The [Levenshtein-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on multiple processes, in [NodeJS](https://nodejs.org/en/about) [WIP]
+The [Levenshtein-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on multiple processes, in [NodeJS](https://nodejs.org/en/about)
 
 A parallelisation of [leven](https://github.com/sindresorhus/leven).
 
@@ -115,7 +116,7 @@ There are multiple known instances of bad actors tricking such systems simply by
 
 The internal workings of matching mechanisms of AML/KYC systems should be kept confidential. 
 
-For more information on this topic, the [FATF](https://www.fatf-gafi.org/en/the-fatf.html) has published a paper that lists and describes various methods of designing robust AML/KYC systems. You can find the paper here: [Opportunities and Challenges of New Technologies FOR AML/CFT](https://www.fatf-gafi.org/content/dam/fatf-gafi/guidance/Opportunities-Challenges-of-New-Technologies-for-AML-CFT.pdf.coredownload.pdf)
+For more information on this topic, the [FATF](https://www.fatf-gafi.org/en/the-fatf.html) has published a paper that lists and describes various methods of designing robust AML/KYC systems. You can find the paper here: [Opportunities and Challenges of New Technologies for AML/CFT](https://www.fatf-gafi.org/content/dam/fatf-gafi/guidance/Opportunities-Challenges-of-New-Technologies-for-AML-CFT.pdf.coredownload.pdf)
 
 ## License
 
