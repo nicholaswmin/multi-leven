@@ -15,7 +15,7 @@ This is a working example of a special case of [parallelization](https://en.wiki
 
 This experiment was created to speed up the search process of a proprietary [AML (Anti-Money Laundering)](https://www.imf.org/en/Topics/Financial-Integrity/amlcft#:~:text=Videos%20and%20Events-,Overview,system%20and%20member%20countries'%20economies.) system that fuzzily links customers of financial organisations to entries in [OFAC's Politically-Exposed Persons, Specially Designated Nationals And Blocked Persons/Entities][ofac-lists].
 
-**Warning:** If you're a designer/architect/engineer of an AML/KYC system, please ensure you read the [Warning](#warning-for-use-aml/kyc-systems) section below.
+**Warning:** If you're a designer/architect/engineer of an AML/KYC system, please ensure you read the [Warning](#warning-for-use-aml-systems) section below.
 
 
 ## Installation
@@ -103,7 +103,7 @@ Tests were run on an iMac 2013, 3.2GHz i5, 8GB RAM running MacOS 10.12.6
 - [ ] Add `teardown` methods
 - [ ] Include difference in each returned match (or pass difference tolerance to filter out irrelevant matches)
 
-## Warning for use in AML/KYC systems
+## Warning for use in AML systems
 > The following warning pertains only for designers/architects/engineers of AML (Anti-Money Laundering) and KYC (Know Your Customer) systems.
 >
 > The Levenshtein-distance, in particular, is very widely used in AML systems. This code is experimental and not fit for use as-is in such systems. Even if it was, a robust AML/KYC system should NOT rely on one type of matching algorithm to cross-match persons/entities to blacklisted persons/entities.
